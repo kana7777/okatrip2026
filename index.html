@@ -680,12 +680,144 @@
     .cost-strip { padding: 12px 14px; }
     .cost-value { font-size: 18px; }
     .info-card { padding: 20px; }
+    .flight-card { padding: 20px; }
+    .flight-row { flex-direction: column; gap: 20px; }
+    .flight-divider { width: 100%; height: 1px; margin: 0; }
+    .flight-no { font-size: 20px; margin-bottom: 12px; }
+    .flight-point .time { font-size: 18px; }
   }
 
   /* page-load animation */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* flight info card */
+  .flight-card {
+    background: linear-gradient(135deg, #fdfaf3 0%, #f5efe6 100%);
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 60px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flight-card::before {
+    content: '✈';
+    position: absolute;
+    font-size: 200px;
+    opacity: 0.025;
+    right: -30px;
+    top: -50px;
+    transform: rotate(-25deg);
+    color: var(--moss-deep);
+  }
+
+  .flight-row {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    position: relative;
+  }
+
+  .flight-col { flex: 1; min-width: 0; }
+
+  .flight-divider {
+    width: 1px;
+    background: var(--line);
+    margin: 8px 0;
+  }
+
+  .flight-label {
+    font-family: 'Klee One', cursive;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.3em;
+    margin-bottom: 6px;
+  }
+
+  .flight-no {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--moss-deep);
+    margin-bottom: 18px;
+    letter-spacing: 0.05em;
+  }
+
+  .flight-route {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .flight-point {
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .flight-point .time {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .flight-point .airport {
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  .flight-arrow {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  .flight-arrow .line {
+    height: 1px;
+    background: var(--accent);
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .flight-arrow .plane {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--paper);
+    padding: 0 6px;
+    color: var(--accent);
+    font-size: 16px;
+  }
+
+  .flight-arrow .date {
+    font-family: 'Klee One', cursive;
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin-top: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  /* rental car badge */
+  .rental-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--moss) 0%, var(--moss-deep) 100%);
+    color: var(--paper);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-left: 8px;
   }
 
   .day-card { animation: fadeUp 0.6s ease both; }
@@ -718,9 +850,9 @@
   <div class="hero-sub">六日五夜 · 看雲海、訪山城、走老街</div>
   <div class="hero-meta">
     <span class="hero-meta-item"><span class="icon">📅</span> 2026.11.07 – 11.12</span>
-    <span class="hero-meta-item"><span class="icon">✈</span> 桃園 ⇄ 岡山</span>
+    <span class="hero-meta-item"><span class="icon">✈</span> IT214 / IT715</span>
     <span class="hero-meta-item"><span class="icon">👯‍♀️</span> 兩人同行</span>
-    <span class="hero-meta-item"><span class="icon">💴</span> 舒適型</span>
+    <span class="hero-meta-item"><span class="icon">🚗</span> 部分自駕</span>
   </div>
 </header>
 
@@ -745,6 +877,51 @@
   <p>挑了岡山這個被稱為「晴天之國」的地方，平均年降雨日少、四季分明，11 月正好遇上岡山後樂園紅葉點燈、備中松山城雲海高峰，又能跨海到四國去走一趟金刀比羅宮。整趟行程刻意把岡山市當基地，每天當天往返，姊妹倆不用扛行李奔波，傍晚都能回到熟悉的飯店休息。<br><br>節奏不趕，每天都留有彈性時間，適合一邊走景點一邊拍照、喝咖啡、慢慢逛雜貨店。</p>
 </section>
 
+<!-- ===== FLIGHT INFO ===== -->
+<div class="flight-card">
+  <div class="flight-row">
+    <div class="flight-col">
+      <div class="flight-label">去程 OUTBOUND</div>
+      <div class="flight-no">IT 214</div>
+      <div class="flight-route">
+        <div class="flight-point">
+          <div class="time">11:00</div>
+          <div class="airport">桃園 TPE</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="line"></div>
+          <div class="plane">✈</div>
+          <div class="date">11/07 (六)</div>
+        </div>
+        <div class="flight-point">
+          <div class="time">14:35</div>
+          <div class="airport">岡山 OKJ</div>
+        </div>
+      </div>
+    </div>
+    <div class="flight-divider"></div>
+    <div class="flight-col">
+      <div class="flight-label">回程 RETURN</div>
+      <div class="flight-no">IT 715</div>
+      <div class="flight-route">
+        <div class="flight-point">
+          <div class="time">17:55</div>
+          <div class="airport">岡山 OKJ</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="line"></div>
+          <div class="plane">✈</div>
+          <div class="date">11/12 (四)</div>
+        </div>
+        <div class="flight-point">
+          <div class="time">夜間</div>
+          <div class="airport">桃園 TPE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== DAYS ===== -->
 <h2 class="section-title" id="days">六日行程</h2>
 <p class="section-subtitle">Daily Itinerary</p>
@@ -767,49 +944,49 @@
   <div class="day-body"><div class="day-body-inner">
     <div class="timeline">
       <div class="tl-item">
-        <div class="tl-time">13:00</div><div class="tl-dot"></div>
+        <div class="tl-time">11:00</div><div class="tl-dot"></div>
         <div class="tl-content">
-          <div class="tl-title">桃園機場起飛</div>
-          <div class="tl-meta">虎航直飛岡山 · 飛行約 2 小時 40 分</div>
+          <div class="tl-title">桃園機場起飛 · 虎航 IT 214</div>
+          <div class="tl-meta">飛行約 2.5 小時 · 機上午餐</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-time">16:30</div><div class="tl-dot"></div>
+        <div class="tl-time">14:35</div><div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-title">抵達岡山桃太郎機場 (OKJ)</div>
           <div class="tl-meta">出關後右手邊 2 號乘車處 · 機場很小很好認</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-time">17:00</div><div class="tl-dot"></div>
+        <div class="tl-time">15:30</div><div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-title">機場巴士 → JR 岡山站西口</div>
           <div class="tl-meta">車程 30 分鐘<span class="sep">|</span>單程 780 円<span class="sep">|</span>可刷 IC 卡</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-time">17:40</div><div class="tl-dot"></div>
+        <div class="tl-time">16:15</div><div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-title">飯店 Check-in、放行李、整裝</div>
           <div class="tl-meta">建議住東口 · 步行就能到所有市區景點</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-time">18:30</div><div class="tl-dot"></div>
+        <div class="tl-time">17:30</div><div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-title">岡山後樂園「秋之幻想庭園」</div>
           <div class="tl-meta">日本三名園之一 · 11 月限定夜間點燈<span class="sep">|</span>路面電車「城下」站徒步 10 分</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-time">20:30</div><div class="tl-dot"></div>
+        <div class="tl-time">19:30</div><div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-title">岡山城（與後樂園聯動點燈）</div>
           <div class="tl-meta">後樂園步行 5 分鐘抵達 · 烏城黑色外觀夜景超美</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-time">21:30</div><div class="tl-dot"></div>
+        <div class="tl-time">20:30</div><div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-title">回岡山站享用晚餐</div>
           <div class="tl-meta">推薦：千屋牛漢堡排 / 一風堂拉麵 / 居酒屋</div>
@@ -828,7 +1005,7 @@
         <li>後樂園 + 岡山城建議買聯票，比分開買省 200 円。</li>
       </ul>
     </div>
-    <div class="sister-tip">第一天先讓身體適應，不要硬塞行程。後樂園很大，慢慢走兩個人邊聊天邊拍照剛剛好，記得穿好走的鞋！</div>
+    <div class="sister-tip">14:35 落地時間很剛好，不會太累就能直接接夜間點燈。後樂園很大，慢慢走兩個人邊聊天邊拍照剛剛好，記得穿好走的鞋！</div>
   </div></div>
 </article>
 
@@ -982,11 +1159,11 @@
     <div class="day-num"><div class="label">DAY</div><div class="num">4</div></div>
     <div class="day-info">
       <div class="day-date">11/10 (二) · 慢遊老街</div>
-      <h3 class="day-title">倉敷美觀地區 · 白壁與柳河</h3>
+      <h3 class="day-title">倉敷美觀地區・傍晚移動到備中高梁<span class="rental-badge">取車</span></h3>
       <div class="day-tags">
         <span class="tag highlight">紙膠帶天堂</span>
         <span class="tag">大原美術館</span>
-        <span class="tag">緩衝日</span>
+        <span class="tag">準備自駕日</span>
       </div>
     </div>
     <div class="day-toggle">▼</div>
@@ -994,12 +1171,12 @@
   <div class="day-body"><div class="day-body-inner">
     <div class="timeline">
       <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">岡山站早餐 + 出發</div>
-        <div class="tl-meta">今天可以睡得久一點</div>
+        <div class="tl-title">岡山站早餐 + 退房（行李帶上）</div>
+        <div class="tl-meta">今晚要住備中高梁 · 行李一起帶</div>
       </div></div>
       <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">JR 岡山 → 倉敷</div>
-        <div class="tl-meta">山陽本線 17 分 · 單程 330 円</div>
+        <div class="tl-meta">山陽本線 17 分 · 單程 330 円<span class="sep">|</span>行李寄倉敷站投幣置物櫃</div>
       </div></div>
       <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">倉敷美觀地區散步</div>
@@ -1021,28 +1198,37 @@
         <div class="tl-title">阿智神社（俯瞰美觀全景）</div>
         <div class="tl-meta">徒步上山 10 分 · 免費</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">回岡山</div>
-        <div class="tl-meta">山陽本線 17 分</div>
+      <div class="tl-item"><div class="tl-time">16:45</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 倉敷 → 岡山 → 備中高梁</div>
+        <div class="tl-meta">岡山轉特急やくも · 約 1 小時</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">18:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">岡山站晚餐</div>
-        <div class="tl-meta">站內「さんすて岡山」整層美食街自選</div>
+      <div class="tl-item"><div class="tl-time">17:50</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">抵達備中高梁站 · Toyota Rent 取車</div>
+        <div class="tl-meta">站前店 18:00 關門 · <b>務必前一週上網預約</b><span class="sep">|</span>步行 1 分鐘</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">18:15</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">高梁国際飯店 Check-in</div>
+        <div class="tl-meta">距站徒步 5 分 · 飯店附停車場</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">高梁城下町晚餐</div>
+        <div class="tl-meta">站附近的居酒屋 / 飯店附餐 · 早點休息明天 5 點起床</div>
       </div></div>
     </div>
     <div class="cost-strip">
       <span class="cost-label">當日預估（每人）</span>
-      <span class="cost-value"><span class="yen">¥</span>9,160</span>
+      <span class="cost-value"><span class="yen">¥</span>10,800</span>
     </div>
     <div class="tips-box">
-      <h4>💡 小提醒</h4>
+      <h4>💡 小提醒（取車重點）</h4>
       <ul>
-        <li>倉敷美觀地區夜晚也有點燈（10–3 月日落到 21:00），如果體力夠可以晚上再去一次，倒影非常美。</li>
-        <li>這天節奏最慢，刻意排在 Day 5 雲海起早之前，當作緩衝休息。</li>
-        <li>桃子工房的水蜜桃聖代是必吃，夏季是新鮮水蜜桃、冬季用罐頭也好吃。</li>
+        <li><b>Toyota Rent 備中高梁駅前店：</b>0866-22-5566 · 營業 9:00–18:00 · 兩人小車一日約 ¥6,600 起。</li>
+        <li>必須<b>事先上網預約</b>（推薦 Klook / Toyota 官網），可選 ETC 卡與中文導航。</li>
+        <li>租車時間建議「11/10 17:30 取 → 11/11 18:00 還」共 24 小時。</li>
+        <li>取車時提供台灣駕照 + 日文譯本（監理所申請 100 元）+ 護照。</li>
       </ul>
     </div>
-    <div class="sister-tip">倉敷整個區超適合穿好看一點的衣服來拍照，很多日本年輕女生會穿和服來，租和服店也很多。MT 紙膠帶店的限量款只有倉敷本店有，超好買。</div>
+    <div class="sister-tip">姊妹分工：一人開車一人導航，輪流也可以。日本租車要記得買 NOC 免責保險（一天約 ¥1,100），萬一刮到車很安心。租車前互拍車身留證據！</div>
   </div></div>
 </article>
 
@@ -1052,11 +1238,12 @@
     <div class="day-num"><div class="label">DAY</div><div class="num">5</div></div>
     <div class="day-info">
       <div class="day-date">11/11 (三) · 行程高潮</div>
-      <h3 class="day-title">天空之城 · 備中松山城雲海</h3>
+      <h3 class="day-title">天空之城・備中松山城雲海・吹屋紅村<span class="rental-badge">自駕</span></h3>
       <div class="day-tags">
-        <span class="tag highlight">需提前預約</span>
-        <span class="tag">早起日</span>
+        <span class="tag highlight">早起日</span>
+        <span class="tag">雲海</span>
         <span class="tag">貓城主</span>
+        <span class="tag">日本遺產</span>
       </div>
     </div>
     <div class="day-toggle">▼</div>
@@ -1064,68 +1251,78 @@
   <div class="day-body"><div class="day-body-inner">
     <div class="timeline">
       <div class="tl-item"><div class="tl-time">05:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">起床 · 搭最早特急やくも出發</div>
-        <div class="tl-meta">JR 特急 · 自由席約 1,800 円 · 35 分</div>
+        <div class="tl-title">起床 · 飯店出發開車</div>
+        <div class="tl-meta">飯店附近停車場取車 · 雲海展望台導航設定</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">06:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">抵備中高梁 · 雲海乘合計程車</div>
-        <div class="tl-meta"><b>需前一天 17:00 前預約</b> · 0866-22-8666</div>
+      <div class="tl-item"><div class="tl-time">06:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">抵達雲海展望台</div>
+        <div class="tl-meta">飯店開車約 25 分 · 山路彎曲小心駕駛<span class="sep">|</span>免費停車</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">06:50</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">雲海展望台 · 拍照</div>
-        <div class="tl-meta">11 月日出 6:25 左右 · 停留約 30 分鐘</div>
+      <div class="tl-item"><div class="tl-time">06:25</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">日出時刻 · 雲海拍照</div>
+        <div class="tl-meta">11 月日出約 6:25 · 雲海最美時段 6:30–7:30</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">08:10</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">回備中高梁站、車站早餐</div>
-        <div class="tl-meta">休息一下、補充熱飲</div>
+      <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回飯店 · 早餐 + 整理</div>
+        <div class="tl-meta">高梁国際飯店附餐 / 站前咖啡店</div>
       </div></div>
       <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">觀光乘合計程車到「ふいご峠」（8 合目）</div>
-        <div class="tl-meta">800 円 · 車程 10 分</div>
+        <div class="tl-title">開車到城見橋公園停車場</div>
+        <div class="tl-meta">飯店出發 10 分鐘 · ふいご峠假日交通管制需轉接駁車</div>
       </div></div>
       <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">徒步 20 分登天守</div>
-        <div class="tl-meta">陡坡 1 km · 慢慢走兩個人邊走邊聊</div>
+        <div class="tl-title">徒步登山至備中松山城天守</div>
+        <div class="tl-meta">陡坡 1 km · 慢慢走兩位約 25 分</div>
       </div></div>
       <div class="tl-item"><div class="tl-time">10:30</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">天守參觀 + 找貓城主さんじゅーろー</div>
         <div class="tl-meta">天守 500 円 · 10:00 與 14:00 兩次巡邏（散步）</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">12:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">高梁城下町散步</div>
-        <div class="tl-meta">武家屋敷 · 紺屋川美觀地區</div>
+      <div class="tl-item"><div class="tl-time">12:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">下山取車 · 開往吹屋故鄉村</div>
+        <div class="tl-meta">山路約 40 分 · 沿途秋景美</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">13:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">午餐：地元定食 / そば</div>
-        <div class="tl-meta">在高梁站周邊輕食</div>
+      <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">吹屋ふるさと村午餐</div>
+        <div class="tl-meta">推薦「吹屋食堂」スープカレー · 老校舍前用餐</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">15:00</div><div class="tl-dot"></div><div class="tl-content">
+      <div class="tl-item"><div class="tl-time">14:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">「ジャパンレッド發祥地」吹屋紅村散策</div>
+        <div class="tl-meta">300m 紅瓦紅壁老街 · 5 館周遊券 1,000 円<span class="sep">|</span>必拍：吹屋郵便局</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">15:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">廣兼邸（八つ墓村取景地）</div>
+        <div class="tl-meta">古色古香的山頂大豪宅 · 從吹屋開車 5 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">16:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">開回備中高梁站 · 還車</div>
+        <div class="tl-meta">山路約 40 分 · 還車前先加滿油</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">JR 備中高梁 → 岡山</div>
-        <div class="tl-meta">特急やくも 35 分</div>
+        <div class="tl-meta">特急やくも 35 分 · 約 1,800 円</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">16:00</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">回岡山 · 自由活動 / Bic Camera 採購</div>
-        <div class="tl-meta">買藥妝、家電免稅</div>
-      </div></div>
-      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">告別宴 · 岡山在地居酒屋</div>
+      <div class="tl-item"><div class="tl-time">18:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回岡山 Check-in 飯店 · 告別宴</div>
         <div class="tl-meta">慶祝雲海成功（或安慰彼此沒看到 😆）</div>
       </div></div>
     </div>
     <div class="cost-strip">
       <span class="cost-label">當日預估（每人）</span>
-      <span class="cost-value"><span class="yen">¥</span>13,000</span>
+      <span class="cost-value"><span class="yen">¥</span>10,500</span>
     </div>
     <div class="tips-box">
       <h4>⚠️ 重要提醒（必讀）</h4>
       <ul>
-        <li><b>務必前一天 17:00 前致電預約</b>高梁市觀光案內所 0866-22-8666，預約「觀光乘合雲海計程車」。發車時刻 7:30 / 8:00。</li>
+        <li><b>租車策略：</b>11/10 17:30 取車、11/11 17:00 還車（24hr 內），兩人小車含保險約 ¥9,000–11,000，分攤每人 ¥4,500–5,500。</li>
         <li>11 月清晨展望台溫度約 <b>2–5°C</b>，且需站立等待，務必穿羽絨外套、戴手套、口袋放暖暖包。</li>
-        <li>雲海是天氣 + 風 + 溫差三條件齊備才有，命中率約六成。事先看「岡山理科大學雲海 AI 預報」與展望台 24 小時 YouTube 直播。</li>
-        <li><b>更穩妥版</b>：11/10 直接住備中高梁，11/11 早上 5 點起床直接展望台，少 35 分鐘車程的不確定性。</li>
+        <li>雲海命中率約六成。事先看「岡山理科大學雲海 AI 預報」與展望台 24 小時 YouTube 直播。</li>
+        <li>展望台周邊有野生猿（國指定天然紀念物）出沒，<b>不要對視、不要餵食、紙袋類不要外露</b>。</li>
+        <li>備中松山城 ふいご峠 在週末會交通管制，需停 城見橋公園搭接駁巴士；平日 11/11 (三) 可直接開到 ふいご峠。</li>
+        <li>吹屋故鄉村山路狹窄、彎多，<b>注意對向車</b>。導航時間都會比實際長 10–15 分鐘。</li>
       </ul>
     </div>
-    <div class="sister-tip">建議姊妹倆 Day 5 都背好行李就出發！如果撲空雲海也別灰心，城本身與雲海是兩件事，貓城主超可愛，安慰獎絕對足夠。記得帶手機行動電源，拍照超耗電。</div>
+    <div class="sister-tip">自駕的好處：可以一路插電充電、行李放車上、想停哪拍哪，超適合姊妹的旅行 VLOG！吹屋紅瓦紅牆的老街在夕陽下超夢幻，記得留時間拍照。如果撲空雲海也別灰心，貓城主超可愛安慰獎絕對足夠。</div>
   </div></div>
 </article>
 
@@ -1135,58 +1332,64 @@
     <div class="day-num"><div class="label">DAY</div><div class="num">6</div></div>
     <div class="day-info">
       <div class="day-date">11/12 (四) · 返國日</div>
-      <h3 class="day-title">最後採購・桃太郎機場</h3>
+      <h3 class="day-title">岡山深度收尾・桃太郎機場</h3>
       <div class="day-tags">
         <span class="tag highlight">伴手禮日</span>
-        <span class="tag">輕鬆收尾</span>
+        <span class="tag">悠閒上午</span>
+        <span class="tag">傍晚航班</span>
       </div>
     </div>
     <div class="day-toggle">▼</div>
   </div>
   <div class="day-body"><div class="day-body-inner">
     <div class="timeline">
-      <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">飯店退房 · 行李寄存岡山站置物櫃</div>
-        <div class="tl-meta">大型置物櫃 700 円 · 兩人合用一個更省</div>
-      </div></div>
       <div class="tl-item"><div class="tl-time">08:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">岡山站早餐</div>
-        <div class="tl-meta">站內或地下街喫茶店</div>
+        <div class="tl-title">飯店早餐 · 慢慢吃</div>
+        <div class="tl-meta">最後一天不用趕</div>
       </div></div>
       <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">岡山表町商店街散步</div>
-        <div class="tl-meta">路面電車「城下」站 · 老店街道</div>
+        <div class="tl-title">退房 · 行李寄存岡山站置物櫃</div>
+        <div class="tl-meta">大型置物櫃 700 円 · 兩人合用一個</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">11:00</div><div class="tl-dot"></div><div class="tl-content">
+      <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">吉備津神社（最後彈性景點）</div>
+        <div class="tl-meta">JR 吉備線 16 分 · 360 公尺長迴廊超夢幻</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">12:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回岡山 · 表町商店街午餐</div>
+        <div class="tl-meta">路面電車「城下」站 · 老店巡禮</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">13:30</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">最後採購：BIC Camera + 岡山名物</div>
         <div class="tl-meta">白桃果凍、吉備團子（廣榮堂）、果汁、藥妝</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-dot"></div><div class="tl-content">
+      <div class="tl-item"><div class="tl-time">15:30</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">岡山站西口 21 號站牌搭機場巴士</div>
-        <div class="tl-meta">巴士 30 分 · 780 円 · <b>務必提前 30 分鐘到</b></div>
+        <div class="tl-meta">巴士 30 分 · 780 円 · <b>提前 30 分鐘到</b></div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">13:50</div><div class="tl-dot"></div><div class="tl-content">
+      <div class="tl-item"><div class="tl-time">16:15</div><div class="tl-dot"></div><div class="tl-content">
         <div class="tl-title">抵達桃太郎機場 · 報到出境</div>
         <div class="tl-meta">機場很小 · 1 樓只有一家全家可逛</div>
       </div></div>
-      <div class="tl-item"><div class="tl-time">16:10</div><div class="tl-dot"></div><div class="tl-content">
-        <div class="tl-title">回程班機起飛 · 帶著回憶回家</div>
+      <div class="tl-item"><div class="tl-time">17:55</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">虎航 IT 715 起飛 · 帶著回憶回家</div>
         <div class="tl-meta">期待下次再相約 ♡</div>
       </div></div>
     </div>
     <div class="cost-strip">
       <span class="cost-label">當日預估（每人）</span>
-      <span class="cost-value"><span class="yen">¥</span>9,220</span>
+      <span class="cost-value"><span class="yen">¥</span>9,500</span>
     </div>
     <div class="tips-box">
       <h4>💡 小提醒</h4>
       <ul>
-        <li><b>回程巴士看到車站排隊就要去排，建議比航班起飛時間提早 2.5 小時就到岡山站西口。</b>沒搭上計程車要 10,000 円。</li>
-        <li>BIC Camera 的免稅櫃台需要排隊，要買大件家電（吹風機、電子鍋）的話一回岡山就先買。</li>
+        <li><b>回程巴士看到車站排隊就要去排，建議比航班起飛時間提早 2.5 小時就到岡山站西口</b>（最晚 15:30 上巴士）。沒搭上計程車要 ¥10,000。</li>
+        <li>BIC Camera 的免稅櫃台需要排隊，要買大件家電（吹風機、電子鍋）的話 13:30 前先排。</li>
+        <li>吉備津神社是備胎景點，如時間不夠改成早午餐 + 商店街閒逛也可。</li>
         <li>岡山站二樓「さんすて岡山」整層都是名物伴手禮店，效率採購很方便。</li>
       </ul>
     </div>
-    <div class="sister-tip">兩人同行的話，伴手禮可以分工買、回程行李互相幫忙托運。Bic Camera 滿 ¥5,500 含稅免稅，記得帶護照。</div>
+    <div class="sister-tip">兩人同行的話，伴手禮可以分工買、回程行李互相幫忙托運。Bic Camera 滿 ¥5,500 含稅免稅，記得帶護照。回程比較晚，吉備津神社的長迴廊真的超漂亮值得一去！</div>
   </div></div>
 </article>
 
@@ -1221,9 +1424,9 @@
     <ul>
       <li>Day 2 ↔ 琴平・丸龜：¥4,300</li>
       <li>Day 3 ↔ 尾道：¥6,840</li>
-      <li>Day 4 ↔ 倉敷：¥660</li>
-      <li>Day 5 ↔ 備中高梁：¥3,600</li>
-      <li><b>合計約 ¥15,400</b></li>
+      <li>Day 4 倉敷+備中高梁：¥1,460</li>
+      <li>Day 5 備中高梁 → 岡山：¥1,800</li>
+      <li><b>合計約 ¥14,400</b></li>
     </ul>
   </div>
 
@@ -1233,11 +1436,46 @@
     <p style="margin-bottom:10px;">直接刷 <b>ICOCA</b> 即可，每段車票實際金額更少，且彈性最高。押金 ¥500，岡山站售票機可購。</p>
     <p>* 若行程改加廣島宮島或松山道後溫泉，PASS 才划算。</p>
   </div>
+
+  <div class="info-card" style="border-top-color: var(--moss);">
+    <h3>🚗 自駕資訊（Day 5）</h3>
+    <ul>
+      <li><b>Toyota Rent 備中高梁駅前店</b></li>
+      <li>地址：高梁市旭町 1335-7</li>
+      <li>電話：0866-22-5566</li>
+      <li>營業：9:00–18:00（年中無休）</li>
+      <li>距 JR 備中高梁站徒步 1 分</li>
+      <li>兩人小車一日約 ¥6,600 起</li>
+      <li>需事先網路預約 + ETC 卡</li>
+    </ul>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--gold);">
+    <h3>📋 自駕必備</h3>
+    <ul>
+      <li><b>台灣駕照 + 日文譯本</b>（監理所申請 ¥100）</li>
+      <li>護照（取車時必出示）</li>
+      <li>信用卡（押金）</li>
+      <li>NOC 免責保險（建議加保 ¥1,100/日）</li>
+      <li>中文導航（取車時告知）</li>
+      <li>姊妹兩人都登記為駕駛</li>
+    </ul>
+  </div>
 </div>
 
 <!-- ===== STAY ===== -->
 <h2 class="section-title" id="stay">住宿建議</h2>
 <p class="section-subtitle">Where to Stay</p>
+
+<div class="info-card" style="border-top-color: var(--accent); margin-bottom: 28px;">
+  <h3>🏨 住宿分配（5 晚）</h3>
+  <ul>
+    <li><b>11/07–11/09（3 晚）：</b>岡山站東口商務飯店</li>
+    <li><b>11/10（1 晚）：</b>備中高梁・高梁国際飯店<span class="price-tag">取車過夜</span></li>
+    <li><b>11/11（1 晚）：</b>回岡山站東口商務飯店</li>
+  </ul>
+  <p style="margin-top: 10px;">這個分配把 Day 5 雲海命中率拉到最高，但行李要在 11/10 拖到備中高梁、11/11 拖回岡山。或者選擇全程都住岡山，11/11 凌晨開車去（少 25 分鐘車程）。</p>
+</div>
 
 <div class="info-grid">
   <div class="info-card" style="border-top-color: var(--gold);">
@@ -1275,14 +1513,19 @@
     </ul>
   </div>
 
+  <div class="info-card" style="border-top-color: var(--moss);">
+    <h3>♨ 高梁国際飯店（11/10 一晚）</h3>
+    <ul>
+      <li>距 JR 備中高梁站徒步 5 分</li>
+      <li>飯店附停車場 · 適合自駕</li>
+      <li>雙人房約 ¥9,000–12,000/晚</li>
+      <li>11/11 早起衝雲海最方便的選擇</li>
+    </ul>
+  </div>
+
   <div class="info-card" style="border-top-color: var(--accent);">
     <h3>💡 兩人房型建議</h3>
     <p>日本商務飯店的 <b>Twin Room（雙床房）</b>比 Double Room（雙人床）貴一點點，但兩個人睡得更舒服。預訂時記得選 Twin。<br><br>建議現在就訂！11 月紅葉季熱門飯店通常一個月前就會滿。</p>
-  </div>
-
-  <div class="info-card" style="border-top-color: var(--moss);">
-    <h3>♨ 進階選項</h3>
-    <p>如果想衝雲海命中率，可考慮 <b>11/10 改住備中高梁的「高梁国際飯店」</b>，11/11 早上 5 點起床直接到展望台，命中率最高。但要扛行李、城市較小較不方便。</p>
   </div>
 </div>
 
@@ -1293,8 +1536,14 @@
 <div class="scenario">
   <h4>☁ 備中松山城雲海撲空（最高機率）</h4>
   <div class="plan"><b>Plan A：</b>城本身與雲海是兩件事，照常上山看天守 + 找貓城主，依然值回票價。</div>
-  <div class="plan"><b>Plan B：</b>當天預報就確定無雲海 → 改去吉備津神社（長迴廊）+ 鬼之城。</div>
-  <div class="plan"><b>Plan C：</b>整日改去蒜山高原泡溫泉，秋日高原 + 露天溫泉超療癒。</div>
+  <div class="plan"><b>Plan B：</b>當天預報就確定無雲海 → 自駕順遊吹屋故鄉村 + 廣兼邸 + 蒜山高原，用車自由度高最適合。</div>
+  <div class="plan"><b>Plan C：</b>整日改去蒜山高原泡溫泉，秋日高原 + 露天溫泉超療癒（自駕約 1 小時 20 分）。</div>
+</div>
+
+<div class="scenario">
+  <h4>🚗 自駕遇雪 / 道路狀況</h4>
+  <div class="plan"><b>注意：</b>備中高梁山區 12 月起會偶爾積雪，11 月通常還沒問題。但雲海展望台山路彎曲，務必慢速行駛。</div>
+  <div class="plan"><b>替代：</b>若遇大雨警報吹屋觀光設施可能全館休館，可改成在備中松山城周邊停留，或直接還車提早回岡山。</div>
 </div>
 
 <div class="scenario">
@@ -1385,10 +1634,11 @@
     <h3>📋 出發前一週要做</h3>
     <ul>
       <li>訂好飯店（11 月紅葉季很搶手）</li>
+      <li><b>申請駕照日文譯本</b>（監理所 ¥100，當場可拿）</li>
+      <li><b>預約 Toyota Rent 備中高梁駅前店</b>（11/10 17:30 取 → 11/11 17:00 還）</li>
       <li>申請 Visit Japan Web</li>
-      <li>下載離線地圖</li>
-      <li>11/10（出發前 1 天）打電話訂雲海乘合計程車</li>
-      <li>確認虎航航班無變更</li>
+      <li>下載離線地圖 + Google Maps 標記景點</li>
+      <li>確認虎航 IT214 / IT715 航班無變更</li>
     </ul>
   </div>
 </div>
@@ -1412,21 +1662,25 @@
       <tr><td class="day-cell">Day 1</td><td>¥1,020</td><td>¥3,700</td><td>¥1,100</td><td>¥5,820</td></tr>
       <tr><td class="day-cell">Day 2</td><td>¥4,300</td><td>¥4,800</td><td>¥400</td><td>¥9,500</td></tr>
       <tr><td class="day-cell">Day 3</td><td>¥6,840</td><td>¥5,000</td><td>¥1,500</td><td>¥13,340</td></tr>
-      <tr><td class="day-cell">Day 4</td><td>¥660</td><td>¥4,800</td><td>¥3,700</td><td>¥9,160</td></tr>
-      <tr><td class="day-cell">Day 5</td><td>¥5,200</td><td>¥5,300</td><td>¥2,500</td><td>¥13,000</td></tr>
-      <tr><td class="day-cell">Day 6</td><td>¥1,020</td><td>¥3,300</td><td>¥4,900</td><td>¥9,220</td></tr>
+      <tr><td class="day-cell">Day 4</td><td>¥2,130</td><td>¥4,800</td><td>¥3,870</td><td>¥10,800</td></tr>
+      <tr><td class="day-cell">Day 5</td><td>¥5,500*</td><td>¥3,500</td><td>¥1,500</td><td>¥10,500</td></tr>
+      <tr><td class="day-cell">Day 6</td><td>¥1,400</td><td>¥3,500</td><td>¥4,600</td><td>¥9,500</td></tr>
     </tbody>
     <tfoot>
       <tr>
         <td>每人總額</td>
-        <td>¥19,040</td>
-        <td>¥26,900</td>
-        <td>¥14,100</td>
-        <td>¥60,040</td>
+        <td>¥21,190</td>
+        <td>¥25,300</td>
+        <td>¥12,970</td>
+        <td>¥59,460</td>
       </tr>
     </tfoot>
   </table>
 </div>
+
+<p style="text-align: center; color: var(--ink-faint); font-size: 13px; margin-bottom: 20px;">
+* Day 5 交通含租車費分攤、油費、保險、特急やくも回程，兩人均分
+</p>
 
 <div class="info-grid">
   <div class="info-card" style="border-top-color: var(--accent);">
