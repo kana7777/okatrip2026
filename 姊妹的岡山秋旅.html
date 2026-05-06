@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="姊妹兩人的岡山秋日旅行 6 天 5 夜行程">
+<title>姊妹的岡山秋旅 · 2026.11.07 – 11.12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Klee+One:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5efe6;
+    --bg-warm: #ede2cf;
+    --paper: #fdfaf3;
+    --ink: #2a2620;
+    --ink-soft: #5b5248;
+    --ink-faint: #8a7e6f;
+    --accent: #b8442a;       /* 紅葉橘 */
+    --accent-deep: #8c2f1c;
+    --moss: #4a5d3a;          /* 苔蘚綠 */
+    --moss-deep: #2f3d24;
+    --gold: #c4923a;
+    --line: #d9cdb6;
+    --shadow: 0 2px 8px rgba(80, 60, 30, 0.08);
+    --shadow-lift: 0 8px 28px rgba(80, 60, 30, 0.14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Zen Maru Gothic', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 16px;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(184, 68, 42, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(74, 93, 58, 0.04) 0%, transparent 40%);
+    min-height: 100vh;
+  }
+
+  /* ============ HEADER ============ */
+  .hero {
+    background: linear-gradient(135deg, #2f3d24 0%, #4a5d3a 60%, #5d6e48 100%);
+    color: var(--paper);
+    padding: 80px 24px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 30%, rgba(196, 146, 58, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 85% 70%, rgba(184, 68, 42, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-leaf {
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .hero-leaf:nth-child(1) { top: 30px; left: 10%; transform: rotate(-15deg); }
+  .hero-leaf:nth-child(2) { bottom: 40px; right: 12%; transform: rotate(25deg); }
+  .hero-leaf:nth-child(3) { top: 50%; left: 5%; font-size: 50px; transform: rotate(45deg); }
+
+  .hero-tag {
+    font-family: 'Klee One', cursive;
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    position: relative;
+  }
+
+  .hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 600;
+    font-size: clamp(36px, 7vw, 64px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    position: relative;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-title .accent {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-family: 'Klee One', cursive;
+    font-size: clamp(16px, 2.2vw, 20px);
+    opacity: 0.92;
+    margin-bottom: 32px;
+    letter-spacing: 0.08em;
+    position: relative;
+  }
+
+  .hero-meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    padding: 16px 28px;
+    background: rgba(253, 250, 243, 0.08);
+    border: 1px solid rgba(253, 250, 243, 0.18);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    font-size: 14px;
+    position: relative;
+  }
+
+  .hero-meta-item { display: flex; align-items: center; gap: 6px; }
+  .hero-meta-item .icon { color: var(--gold); }
+
+  /* ============ NAV ============ */
+  .nav-strip {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-inner {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    min-width: max-content;
+    margin: 0 auto;
+  }
+
+  .nav-link {
+    padding: 8px 16px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover {
+    background: var(--bg-warm);
+    color: var(--accent);
+  }
+
+  /* ============ MAIN ============ */
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 60px 20px 80px;
+  }
+
+  .intro-card {
+    background: var(--paper);
+    border-radius: 4px;
+    padding: 36px 32px;
+    margin-bottom: 60px;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+
+  .intro-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 24px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 100px;
+    color: var(--accent);
+    opacity: 0.15;
+    line-height: 1;
+  }
+
+  .intro-card h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    color: var(--moss-deep);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .intro-card p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    color: var(--moss-deep);
+    margin: 80px 0 8px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  .section-title:first-of-type { margin-top: 20px; }
+
+  .section-subtitle {
+    font-family: 'Klee One', cursive;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  /* ============ DAY CARDS ============ */
+  .day-card {
+    background: var(--paper);
+    border-radius: 8px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.3s;
+  }
+
+  .day-card:hover { box-shadow: var(--shadow-lift); }
+
+  .day-header {
+    padding: 28px 28px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .day-header:hover { background: rgba(184, 68, 42, 0.03); }
+
+  .day-num {
+    flex-shrink: 0;
+    width: 70px;
+    text-align: center;
+    padding: 10px 0;
+    border: 1.5px solid var(--moss);
+    border-radius: 4px;
+    background: var(--bg-warm);
+  }
+
+  .day-num .label {
+    font-family: 'Klee One', cursive;
+    font-size: 11px;
+    color: var(--moss);
+    letter-spacing: 0.2em;
+  }
+
+  .day-num .num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--moss-deep);
+    line-height: 1;
+    margin-top: 4px;
+  }
+
+  .day-info { flex: 1; min-width: 0; }
+
+  .day-date {
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+
+  .day-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .day-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    background: var(--bg-warm);
+    color: var(--ink-soft);
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+  }
+
+  .tag.highlight {
+    background: var(--accent);
+    color: var(--paper);
+  }
+
+  .day-toggle {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-faint);
+    transition: transform 0.3s;
+  }
+
+  .day-card.open .day-toggle { transform: rotate(180deg); color: var(--accent); }
+
+  .day-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .day-card.open .day-body { max-height: 6000px; }
+
+  .day-body-inner {
+    padding: 0 28px 32px;
+    border-top: 1px dashed var(--line);
+    margin-top: 8px;
+    padding-top: 24px;
+  }
+
+  /* timeline */
+  .timeline { position: relative; margin: 16px 0 28px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 56px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent) 0%, var(--moss) 100%);
+    opacity: 0.3;
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+
+  .tl-time {
+    flex-shrink: 0;
+    width: 50px;
+    font-family: 'Klee One', cursive;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    padding-top: 2px;
+    text-align: right;
+  }
+
+  .tl-dot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--accent);
+    z-index: 1;
+  }
+
+  .tl-content { flex: 1; padding-bottom: 4px; }
+
+  .tl-title {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+
+  .tl-meta {
+    font-size: 13px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+
+  .tl-meta .sep { color: var(--line); margin: 0 8px; }
+
+  .cost-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, var(--bg-warm) 0%, #e8d9bd 100%);
+    border-radius: 6px;
+    margin-top: 20px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .cost-label {
+    font-family: 'Klee One', cursive;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.1em;
+  }
+
+  .cost-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    color: var(--accent-deep);
+    font-weight: 700;
+  }
+
+  .cost-value .yen {
+    font-size: 14px;
+    color: var(--ink-faint);
+    margin-right: 4px;
+  }
+
+  /* tips */
+  .tips-box {
+    margin-top: 24px;
+    padding: 20px;
+    background: rgba(74, 93, 58, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid var(--moss);
+  }
+
+  .tips-box h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--moss-deep);
+    margin-bottom: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tips-box ul { list-style: none; }
+
+  .tips-box li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .tips-box li::before {
+    content: '•';
+    color: var(--moss);
+    position: absolute;
+    left: 4px;
+    font-weight: 700;
+  }
+
+  .tips-box li b { color: var(--accent-deep); font-weight: 600; }
+
+  /* sister tip */
+  .sister-tip {
+    margin-top: 16px;
+    padding: 16px 18px;
+    background: linear-gradient(135deg, #fdf2ef 0%, #fae3dd 100%);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+    font-size: 13px;
+    color: var(--accent-deep);
+    line-height: 1.7;
+  }
+
+  .sister-tip::before {
+    content: '♡ ';
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ============ INFO BLOCKS ============ */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .info-card {
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-top: 3px solid var(--moss);
+  }
+
+  .info-card h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--moss-deep);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .info-card p, .info-card li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+
+  .info-card ul { list-style: none; padding-left: 0; }
+
+  .info-card li {
+    padding: 6px 0 6px 18px;
+    position: relative;
+  }
+
+  .info-card li::before {
+    content: '◦';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--accent);
+  }
+
+  .info-card .price-tag {
+    display: inline-block;
+    background: var(--bg-warm);
+    color: var(--accent-deep);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 6px;
+  }
+
+  /* budget table */
+  .budget-table {
+    background: var(--paper);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead {
+    background: var(--moss-deep);
+    color: var(--paper);
+  }
+
+  th {
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-family: 'Klee One', cursive;
+    font-size: 13px;
+  }
+
+  td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+
+  tbody tr:nth-child(even) { background: rgba(237, 226, 207, 0.3); }
+  tbody tr:hover { background: rgba(184, 68, 42, 0.04); }
+
+  td.day-cell {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 600;
+    color: var(--moss-deep);
+  }
+
+  tfoot {
+    background: linear-gradient(135deg, #f3e6c7 0%, #e8d9bd 100%);
+    color: var(--accent-deep);
+    font-weight: 600;
+  }
+
+  tfoot td {
+    padding: 16px 12px;
+    border: none;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+  }
+
+  /* contingency cards */
+  .scenario {
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    border-left: 3px solid var(--gold);
+  }
+
+  .scenario h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--accent-deep);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .scenario .plan {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    padding: 8px 0 8px 20px;
+    position: relative;
+    border-left: 2px solid var(--bg-warm);
+    margin-left: 8px;
+    padding-left: 16px;
+    margin-bottom: 6px;
+  }
+
+  .scenario .plan b {
+    color: var(--moss-deep);
+    margin-right: 6px;
+  }
+
+  /* footer */
+  footer {
+    background: var(--moss-deep);
+    color: var(--bg-warm);
+    text-align: center;
+    padding: 50px 20px 40px;
+    margin-top: 80px;
+  }
+
+  .footer-leaf { font-size: 24px; color: var(--gold); margin-bottom: 16px; }
+
+  footer p {
+    font-family: 'Klee One', cursive;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    opacity: 0.85;
+  }
+
+  footer .heart { color: var(--accent); }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    .hero { padding: 56px 20px 70px; }
+    main { padding: 40px 16px 60px; }
+    .intro-card { padding: 24px 20px; }
+    .day-header { padding: 20px 18px 16px; gap: 16px; }
+    .day-body-inner { padding: 20px 18px 24px; }
+    .day-num { width: 56px; padding: 8px 0; }
+    .day-num .num { font-size: 22px; }
+    .day-title { font-size: 18px; }
+    .timeline::before { left: 46px; }
+    .tl-time { width: 40px; font-size: 12px; }
+    .section-title { font-size: 26px; margin-top: 60px; }
+    th, td { padding: 10px 8px; font-size: 13px; }
+    .cost-strip { padding: 12px 14px; }
+    .cost-value { font-size: 18px; }
+    .info-card { padding: 20px; }
+  }
+
+  /* page-load animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .day-card { animation: fadeUp 0.6s ease both; }
+  .day-card:nth-child(1) { animation-delay: 0.05s; }
+  .day-card:nth-child(2) { animation-delay: 0.1s; }
+  .day-card:nth-child(3) { animation-delay: 0.15s; }
+  .day-card:nth-child(4) { animation-delay: 0.2s; }
+  .day-card:nth-child(5) { animation-delay: 0.25s; }
+  .day-card:nth-child(6) { animation-delay: 0.3s; }
+
+  /* print */
+  @media print {
+    .nav-strip, .day-toggle { display: none; }
+    .day-body { max-height: none !important; }
+    .day-body-inner { border-top: 1px solid var(--line); }
+    .hero { padding: 40px 20px; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <span class="hero-leaf">🍁</span>
+  <span class="hero-leaf">🍂</span>
+  <span class="hero-leaf">🍁</span>
+  <div class="hero-tag">Sister Trip · Autumn 2026</div>
+  <h1 class="hero-title">姊妹的<span class="accent">岡山</span>秋旅</h1>
+  <div class="hero-sub">六日五夜 · 看雲海、訪山城、走老街</div>
+  <div class="hero-meta">
+    <span class="hero-meta-item"><span class="icon">📅</span> 2026.11.07 – 11.12</span>
+    <span class="hero-meta-item"><span class="icon">✈</span> 桃園 ⇄ 岡山</span>
+    <span class="hero-meta-item"><span class="icon">👯‍♀️</span> 兩人同行</span>
+    <span class="hero-meta-item"><span class="icon">💴</span> 舒適型</span>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav-strip">
+  <div class="nav-inner">
+    <a class="nav-link" href="#intro">前言</a>
+    <a class="nav-link" href="#days">六天行程</a>
+    <a class="nav-link" href="#transport">交通解析</a>
+    <a class="nav-link" href="#stay">住宿建議</a>
+    <a class="nav-link" href="#contingency">突發備案</a>
+    <a class="nav-link" href="#packing">行前清單</a>
+    <a class="nav-link" href="#budget">預算總覽</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== INTRO ===== -->
+<section id="intro" class="intro-card">
+  <h2>關於這趟旅行</h2>
+  <p>挑了岡山這個被稱為「晴天之國」的地方，平均年降雨日少、四季分明，11 月正好遇上岡山後樂園紅葉點燈、備中松山城雲海高峰，又能跨海到四國去走一趟金刀比羅宮。整趟行程刻意把岡山市當基地，每天當天往返，姊妹倆不用扛行李奔波，傍晚都能回到熟悉的飯店休息。<br><br>節奏不趕，每天都留有彈性時間，適合一邊走景點一邊拍照、喝咖啡、慢慢逛雜貨店。</p>
+</section>
+
+<!-- ===== DAYS ===== -->
+<h2 class="section-title" id="days">六日行程</h2>
+<p class="section-subtitle">Daily Itinerary</p>
+
+<!-- DAY 1 -->
+<article class="day-card open">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num"><div class="label">DAY</div><div class="num">1</div></div>
+    <div class="day-info">
+      <div class="day-date">11/07 (六) · 抵達日</div>
+      <h3 class="day-title">夜訪後樂園・秋之幻想庭園</h3>
+      <div class="day-tags">
+        <span class="tag highlight">夜間點燈限定</span>
+        <span class="tag">輕鬆入境</span>
+        <span class="tag">岡山市區</span>
+      </div>
+    </div>
+    <div class="day-toggle">▼</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">13:00</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">桃園機場起飛</div>
+          <div class="tl-meta">虎航直飛岡山 · 飛行約 2 小時 40 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">16:30</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">抵達岡山桃太郎機場 (OKJ)</div>
+          <div class="tl-meta">出關後右手邊 2 號乘車處 · 機場很小很好認</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">17:00</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">機場巴士 → JR 岡山站西口</div>
+          <div class="tl-meta">車程 30 分鐘<span class="sep">|</span>單程 780 円<span class="sep">|</span>可刷 IC 卡</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">17:40</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">飯店 Check-in、放行李、整裝</div>
+          <div class="tl-meta">建議住東口 · 步行就能到所有市區景點</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">18:30</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">岡山後樂園「秋之幻想庭園」</div>
+          <div class="tl-meta">日本三名園之一 · 11 月限定夜間點燈<span class="sep">|</span>路面電車「城下」站徒步 10 分</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">20:30</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">岡山城（與後樂園聯動點燈）</div>
+          <div class="tl-meta">後樂園步行 5 分鐘抵達 · 烏城黑色外觀夜景超美</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">21:30</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">回岡山站享用晚餐</div>
+          <div class="tl-meta">推薦：千屋牛漢堡排 / 一風堂拉麵 / 居酒屋</div>
+        </div>
+      </div>
+    </div>
+    <div class="cost-strip">
+      <span class="cost-label">當日預估（每人，不含住宿）</span>
+      <span class="cost-value"><span class="yen">¥</span>5,820</span>
+    </div>
+    <div class="tips-box">
+      <h4>💡 小提醒</h4>
+      <ul>
+        <li>11 月中旬岡山日落約 17:00，下機後直接進場剛剛好。</li>
+        <li>「秋之幻想庭園」是後樂園 <b>11 月中下旬</b>限定，紅葉 + 燈光 + 能樂舞台組合非常浪漫。</li>
+        <li>後樂園 + 岡山城建議買聯票，比分開買省 200 円。</li>
+      </ul>
+    </div>
+    <div class="sister-tip">第一天先讓身體適應，不要硬塞行程。後樂園很大，慢慢走兩個人邊聊天邊拍照剛剛好，記得穿好走的鞋！</div>
+  </div></div>
+</article>
+
+<!-- DAY 2 -->
+<article class="day-card">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num"><div class="label">DAY</div><div class="num">2</div></div>
+    <div class="day-info">
+      <div class="day-date">11/08 (日) · 跨海四國</div>
+      <h3 class="day-title">金刀比羅宮 1368 階・丸龜城</h3>
+      <div class="day-tags">
+        <span class="tag highlight">瀨戶大橋</span>
+        <span class="tag">爬山日</span>
+        <span class="tag">骨付鳥晚餐</span>
+      </div>
+    </div>
+    <div class="day-toggle">▼</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">07:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山站早餐</div>
+        <div class="tl-meta">站內 STARBUCKS 或地下街喫茶店</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">08:08</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 岡山 → 琴平（搭乘 Marine Liner）</div>
+        <div class="tl-meta">瀨戶大橋線 · 約 1 小時 38 分<span class="sep">|</span>單程約 2,170 円<span class="sep">|</span><b>建議坐左側</b>看瀨戶大橋</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">金刀比羅宮 · 本宮 785 階參拜</div>
+        <div class="tl-meta">免費入場 · 入口可借拐杖 200 円<span class="sep">|</span>來回約 1.5–2 小時</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">12:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">參道午餐：讚岐烏龍麵</div>
+        <div class="tl-meta">推薦中野烏龍學校或神椿咖啡（500 階限定）</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">14:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 琴平 → 丸龜</div>
+        <div class="tl-meta">JR 土讚線普通車 · 約 25 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">14:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">丸龜城（現存 12 天守之一）</div>
+        <div class="tl-meta">日本石垣最高的城 · 天守 200 円 · 從天守看瀨戶內海絕景</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">16:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">丸龜本町商店街散步</div>
+        <div class="tl-meta">逛逛在地小店、買團扇紀念品（丸龜團扇日本第一）</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 丸龜 → 岡山</div>
+        <div class="tl-meta">予讚線 + Marine Liner · 約 1 小時 20 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">晚餐：一鶴 岡山店（讚岐骨付鳥）</div>
+        <div class="tl-meta">香川名物 · 點「親」與「ひな」各一隻分享</div>
+      </div></div>
+    </div>
+    <div class="cost-strip">
+      <span class="cost-label">當日預估（每人）</span>
+      <span class="cost-value"><span class="yen">¥</span>9,500</span>
+    </div>
+    <div class="tips-box">
+      <h4>💡 小提醒</h4>
+      <ul>
+        <li><b>體力評估：</b>金刀比羅宮 785 階雖然多但都是緩坡石階，慢慢走兩位都能完成。如真的累了，到 365 階「大門」止步也算到了。</li>
+        <li>Marine Liner 1 號車最前面有「全景座位」（4 席限定），需綠色車廂券才能坐，景觀無敵；2 號車後普通自由席景觀也不錯。</li>
+        <li>11/08 是週日，金刀比羅宮人會多，建議搭更早的 07:38 班次出發。</li>
+      </ul>
+    </div>
+    <div class="sister-tip">兩個人爬樓梯時可以分批走、邊走邊拍照。500 階的「神椿」咖啡是金刀比羅宮的隱藏景點，是 SHISEIDO 的合作咖啡，超適合姊妹放鬆休息一下。</div>
+  </div></div>
+</article>
+
+<!-- DAY 3 -->
+<article class="day-card">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num"><div class="label">DAY</div><div class="num">3</div></div>
+    <div class="day-info">
+      <div class="day-date">11/09 (一) · 山海小城</div>
+      <h3 class="day-title">尾道 · 千光寺與貓之細道</h3>
+      <div class="day-tags">
+        <span class="tag highlight">慢遊一日</span>
+        <span class="tag">尾道拉麵</span>
+        <span class="tag">IG 拍照</span>
+      </div>
+    </div>
+    <div class="day-toggle">▼</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">08:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山站早餐</div>
+        <div class="tl-meta">慢慢吃 · 今天節奏輕鬆</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 岡山 → 福山 → 尾道</div>
+        <div class="tl-meta">新幹線 18 分 + 山陽本線 19 分<span class="sep">|</span>約 3,420 円</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">10:45</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">千光寺山纜車上山</div>
+        <div class="tl-meta">3 分鐘上山 · 來回 500 円</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">11:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">千光寺 + 展望台 + 文學小徑</div>
+        <div class="tl-meta">俯瞰尾道水道、瀨戶內海島嶼<span class="sep">|</span>11 月有紅葉</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">12:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">徒步下山到貓之細道、天寧寺三重塔</div>
+        <div class="tl-meta">沿途巷弄超好拍 · 運氣好會遇到貓咪</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">13:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">午餐：尾道拉麵</div>
+        <div class="tl-meta">推薦：響、Shoya（朱華園週四公休）</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">15:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">尾道本通商店街掃街</div>
+        <div class="tl-meta">手作雜貨、貓咪主題小店、咖啡店</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">16:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">「ネコノテパン工場」貓手麵包店</div>
+        <div class="tl-meta">超人氣手作麵包 · 賣完就收</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 尾道 → 福山 → 岡山</div>
+        <div class="tl-meta">新幹線回程 · 約 50 分鐘</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">19:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山晚餐：海鮮居酒屋</div>
+        <div class="tl-meta">推薦「魚屋 海さくら」品瀨戶內海鮮</div>
+      </div></div>
+    </div>
+    <div class="cost-strip">
+      <span class="cost-label">當日預估（每人）</span>
+      <span class="cost-value"><span class="yen">¥</span>13,340</span>
+    </div>
+    <div class="tips-box">
+      <h4>💡 小提醒</h4>
+      <ul>
+        <li><b>纜車上山、徒步下山</b>是最舒服的走法，下山一路都是文學小徑與小景點。</li>
+        <li>週一較多咖啡店與雜貨店公休，出發前可以在 IG 確認當天營業。</li>
+        <li>這天交通費較高，但尾道是行程中最有故事感的小城，值得留時間慢遊。</li>
+      </ul>
+    </div>
+    <div class="sister-tip">尾道又被稱為「電影之城」、「文學之城」，小津安二郎《東京物語》就在這裡取景。兩個人走在山海小巷裡，感覺超適合錄 VLOG。</div>
+  </div></div>
+</article>
+
+<!-- DAY 4 -->
+<article class="day-card">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num"><div class="label">DAY</div><div class="num">4</div></div>
+    <div class="day-info">
+      <div class="day-date">11/10 (二) · 慢遊老街</div>
+      <h3 class="day-title">倉敷美觀地區 · 白壁與柳河</h3>
+      <div class="day-tags">
+        <span class="tag highlight">紙膠帶天堂</span>
+        <span class="tag">大原美術館</span>
+        <span class="tag">緩衝日</span>
+      </div>
+    </div>
+    <div class="day-toggle">▼</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山站早餐 + 出發</div>
+        <div class="tl-meta">今天可以睡得久一點</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 岡山 → 倉敷</div>
+        <div class="tl-meta">山陽本線 17 分 · 單程 330 円</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">倉敷美觀地區散步</div>
+        <div class="tl-meta">白壁老街 · 倉敷川與柳樹倒影</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">11:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">大原美術館</div>
+        <div class="tl-meta">日本第一座私立西洋美術館 · 入場 2,000 円</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">午餐：倉敷川邊咖啡</div>
+        <div class="tl-meta">「Hana Hana」三明治 / 「三宅商店」古民家咖啡</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">14:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">紙膠帶聖地 · MT 倉敷本店「TANE」</div>
+        <div class="tl-meta">超過 1,300 種紙膠帶 · 文具控天堂</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">16:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">阿智神社（俯瞰美觀全景）</div>
+        <div class="tl-meta">徒步上山 10 分 · 免費</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回岡山</div>
+        <div class="tl-meta">山陽本線 17 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">18:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山站晚餐</div>
+        <div class="tl-meta">站內「さんすて岡山」整層美食街自選</div>
+      </div></div>
+    </div>
+    <div class="cost-strip">
+      <span class="cost-label">當日預估（每人）</span>
+      <span class="cost-value"><span class="yen">¥</span>9,160</span>
+    </div>
+    <div class="tips-box">
+      <h4>💡 小提醒</h4>
+      <ul>
+        <li>倉敷美觀地區夜晚也有點燈（10–3 月日落到 21:00），如果體力夠可以晚上再去一次，倒影非常美。</li>
+        <li>這天節奏最慢，刻意排在 Day 5 雲海起早之前，當作緩衝休息。</li>
+        <li>桃子工房的水蜜桃聖代是必吃，夏季是新鮮水蜜桃、冬季用罐頭也好吃。</li>
+      </ul>
+    </div>
+    <div class="sister-tip">倉敷整個區超適合穿好看一點的衣服來拍照，很多日本年輕女生會穿和服來，租和服店也很多。MT 紙膠帶店的限量款只有倉敷本店有，超好買。</div>
+  </div></div>
+</article>
+
+<!-- DAY 5 -->
+<article class="day-card">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num"><div class="label">DAY</div><div class="num">5</div></div>
+    <div class="day-info">
+      <div class="day-date">11/11 (三) · 行程高潮</div>
+      <h3 class="day-title">天空之城 · 備中松山城雲海</h3>
+      <div class="day-tags">
+        <span class="tag highlight">需提前預約</span>
+        <span class="tag">早起日</span>
+        <span class="tag">貓城主</span>
+      </div>
+    </div>
+    <div class="day-toggle">▼</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">05:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">起床 · 搭最早特急やくも出發</div>
+        <div class="tl-meta">JR 特急 · 自由席約 1,800 円 · 35 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">06:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">抵備中高梁 · 雲海乘合計程車</div>
+        <div class="tl-meta"><b>需前一天 17:00 前預約</b> · 0866-22-8666</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">06:50</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">雲海展望台 · 拍照</div>
+        <div class="tl-meta">11 月日出 6:25 左右 · 停留約 30 分鐘</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">08:10</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回備中高梁站、車站早餐</div>
+        <div class="tl-meta">休息一下、補充熱飲</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">觀光乘合計程車到「ふいご峠」（8 合目）</div>
+        <div class="tl-meta">800 円 · 車程 10 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">徒步 20 分登天守</div>
+        <div class="tl-meta">陡坡 1 km · 慢慢走兩個人邊走邊聊</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">10:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">天守參觀 + 找貓城主さんじゅーろー</div>
+        <div class="tl-meta">天守 500 円 · 10:00 與 14:00 兩次巡邏（散步）</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">12:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">高梁城下町散步</div>
+        <div class="tl-meta">武家屋敷 · 紺屋川美觀地區</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">13:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">午餐：地元定食 / そば</div>
+        <div class="tl-meta">在高梁站周邊輕食</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">15:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">JR 備中高梁 → 岡山</div>
+        <div class="tl-meta">特急やくも 35 分</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">16:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回岡山 · 自由活動 / Bic Camera 採購</div>
+        <div class="tl-meta">買藥妝、家電免稅</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">告別宴 · 岡山在地居酒屋</div>
+        <div class="tl-meta">慶祝雲海成功（或安慰彼此沒看到 😆）</div>
+      </div></div>
+    </div>
+    <div class="cost-strip">
+      <span class="cost-label">當日預估（每人）</span>
+      <span class="cost-value"><span class="yen">¥</span>13,000</span>
+    </div>
+    <div class="tips-box">
+      <h4>⚠️ 重要提醒（必讀）</h4>
+      <ul>
+        <li><b>務必前一天 17:00 前致電預約</b>高梁市觀光案內所 0866-22-8666，預約「觀光乘合雲海計程車」。發車時刻 7:30 / 8:00。</li>
+        <li>11 月清晨展望台溫度約 <b>2–5°C</b>，且需站立等待，務必穿羽絨外套、戴手套、口袋放暖暖包。</li>
+        <li>雲海是天氣 + 風 + 溫差三條件齊備才有，命中率約六成。事先看「岡山理科大學雲海 AI 預報」與展望台 24 小時 YouTube 直播。</li>
+        <li><b>更穩妥版</b>：11/10 直接住備中高梁，11/11 早上 5 點起床直接展望台，少 35 分鐘車程的不確定性。</li>
+      </ul>
+    </div>
+    <div class="sister-tip">建議姊妹倆 Day 5 都背好行李就出發！如果撲空雲海也別灰心，城本身與雲海是兩件事，貓城主超可愛，安慰獎絕對足夠。記得帶手機行動電源，拍照超耗電。</div>
+  </div></div>
+</article>
+
+<!-- DAY 6 -->
+<article class="day-card">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num"><div class="label">DAY</div><div class="num">6</div></div>
+    <div class="day-info">
+      <div class="day-date">11/12 (四) · 返國日</div>
+      <h3 class="day-title">最後採購・桃太郎機場</h3>
+      <div class="day-tags">
+        <span class="tag highlight">伴手禮日</span>
+        <span class="tag">輕鬆收尾</span>
+      </div>
+    </div>
+    <div class="day-toggle">▼</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">飯店退房 · 行李寄存岡山站置物櫃</div>
+        <div class="tl-meta">大型置物櫃 700 円 · 兩人合用一個更省</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">08:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山站早餐</div>
+        <div class="tl-meta">站內或地下街喫茶店</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山表町商店街散步</div>
+        <div class="tl-meta">路面電車「城下」站 · 老店街道</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">11:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">最後採購：BIC Camera + 岡山名物</div>
+        <div class="tl-meta">白桃果凍、吉備團子（廣榮堂）、果汁、藥妝</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">岡山站西口 21 號站牌搭機場巴士</div>
+        <div class="tl-meta">巴士 30 分 · 780 円 · <b>務必提前 30 分鐘到</b></div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">13:50</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">抵達桃太郎機場 · 報到出境</div>
+        <div class="tl-meta">機場很小 · 1 樓只有一家全家可逛</div>
+      </div></div>
+      <div class="tl-item"><div class="tl-time">16:10</div><div class="tl-dot"></div><div class="tl-content">
+        <div class="tl-title">回程班機起飛 · 帶著回憶回家</div>
+        <div class="tl-meta">期待下次再相約 ♡</div>
+      </div></div>
+    </div>
+    <div class="cost-strip">
+      <span class="cost-label">當日預估（每人）</span>
+      <span class="cost-value"><span class="yen">¥</span>9,220</span>
+    </div>
+    <div class="tips-box">
+      <h4>💡 小提醒</h4>
+      <ul>
+        <li><b>回程巴士看到車站排隊就要去排，建議比航班起飛時間提早 2.5 小時就到岡山站西口。</b>沒搭上計程車要 10,000 円。</li>
+        <li>BIC Camera 的免稅櫃台需要排隊，要買大件家電（吹風機、電子鍋）的話一回岡山就先買。</li>
+        <li>岡山站二樓「さんすて岡山」整層都是名物伴手禮店，效率採購很方便。</li>
+      </ul>
+    </div>
+    <div class="sister-tip">兩人同行的話，伴手禮可以分工買、回程行李互相幫忙托運。Bic Camera 滿 ¥5,500 含稅免稅，記得帶護照。</div>
+  </div></div>
+</article>
+
+<!-- ===== TRANSPORT ===== -->
+<h2 class="section-title" id="transport">交通系統解析</h2>
+<p class="section-subtitle">Transportation Guide</p>
+
+<div class="info-grid">
+  <div class="info-card">
+    <h3>🚌 機場 ↔ 市區</h3>
+    <ul>
+      <li>岡山機場 ↔ JR 岡山站西口<span class="price-tag">¥780</span></li>
+      <li>車程 30 分 · 配合航班發車</li>
+      <li>支援現金、信用卡、IC 卡</li>
+      <li>機場 ↔ 倉敷北口<span class="price-tag">¥1,150</span></li>
+      <li>計程車到市區約 ¥6,000–8,000</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>🚋 市區內交通</h3>
+    <ul>
+      <li>路面電車一站<span class="price-tag">¥120</span></li>
+      <li>後樂園 / 岡山城都搭「東山行」到「城下」站</li>
+      <li>岡山站 → 後樂園步行 25 分（沿西川綠道）</li>
+      <li>建議直接買 ICOCA 卡通用</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>🚄 跨縣 JR 試算</h3>
+    <ul>
+      <li>Day 2 ↔ 琴平・丸龜：¥4,300</li>
+      <li>Day 3 ↔ 尾道：¥6,840</li>
+      <li>Day 4 ↔ 倉敷：¥660</li>
+      <li>Day 5 ↔ 備中高梁：¥3,600</li>
+      <li><b>合計約 ¥15,400</b></li>
+    </ul>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--accent);">
+    <h3>💡 票券建議</h3>
+    <p style="margin-bottom:10px;"><b>不買瀨戶內 PASS</b>（¥22,000）會回不了本。</p>
+    <p style="margin-bottom:10px;">直接刷 <b>ICOCA</b> 即可，每段車票實際金額更少，且彈性最高。押金 ¥500，岡山站售票機可購。</p>
+    <p>* 若行程改加廣島宮島或松山道後溫泉，PASS 才划算。</p>
+  </div>
+</div>
+
+<!-- ===== STAY ===== -->
+<h2 class="section-title" id="stay">住宿建議</h2>
+<p class="section-subtitle">Where to Stay</p>
+
+<div class="info-grid">
+  <div class="info-card" style="border-top-color: var(--gold);">
+    <h3>🏨 推薦區域：岡山站東口</h3>
+    <p>步行 3–5 分鐘範圍內，去後樂園、岡山城最近，回飯店休息也方便。所有跨縣行程都從 JR 岡山站發車，不用再轉路面電車。</p>
+  </div>
+
+  <div class="info-card">
+    <h3>♨ Dormy Inn 岡山</h3>
+    <ul>
+      <li>大浴場 + 露天溫泉</li>
+      <li>免費宵夜拉麵（晚 21:30 起）</li>
+      <li>姊妹房雙人約 ¥10,000–14,000/晚</li>
+      <li>距岡山站東口步行 6 分</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>🏨 Comfort Hotel 岡山</h3>
+    <ul>
+      <li>站東口步行 1 分鐘</li>
+      <li>免費早餐</li>
+      <li>雙人房約 ¥8,000–11,000/晚</li>
+      <li>CP 值高、適合精打細算</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>🏨 三井花園飯店岡山</h3>
+    <ul>
+      <li>站東口步行 5 分鐘</li>
+      <li>頂樓有大浴場 + 城景</li>
+      <li>雙人房約 ¥13,000–18,000/晚</li>
+      <li>環境較精緻、適合姊妹住</li>
+    </ul>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--accent);">
+    <h3>💡 兩人房型建議</h3>
+    <p>日本商務飯店的 <b>Twin Room（雙床房）</b>比 Double Room（雙人床）貴一點點，但兩個人睡得更舒服。預訂時記得選 Twin。<br><br>建議現在就訂！11 月紅葉季熱門飯店通常一個月前就會滿。</p>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--moss);">
+    <h3>♨ 進階選項</h3>
+    <p>如果想衝雲海命中率，可考慮 <b>11/10 改住備中高梁的「高梁国際飯店」</b>，11/11 早上 5 點起床直接到展望台，命中率最高。但要扛行李、城市較小較不方便。</p>
+  </div>
+</div>
+
+<!-- ===== CONTINGENCY ===== -->
+<h2 class="section-title" id="contingency">突發狀況備案</h2>
+<p class="section-subtitle">Plan B</p>
+
+<div class="scenario">
+  <h4>☁ 備中松山城雲海撲空（最高機率）</h4>
+  <div class="plan"><b>Plan A：</b>城本身與雲海是兩件事，照常上山看天守 + 找貓城主，依然值回票價。</div>
+  <div class="plan"><b>Plan B：</b>當天預報就確定無雲海 → 改去吉備津神社（長迴廊）+ 鬼之城。</div>
+  <div class="plan"><b>Plan C：</b>整日改去蒜山高原泡溫泉，秋日高原 + 露天溫泉超療癒。</div>
+</div>
+
+<div class="scenario">
+  <h4>🚶‍♀️ 金刀比羅宮體力不支或下雨</h4>
+  <div class="plan"><b>替代：</b>走到 365 階「大門」止步即可，改去琴平花壇日歸入浴 ¥500。</div>
+  <div class="plan"><b>或：</b>直接改去高松栗林公園（米其林三星庭園），琴平搭 JR 25 分到高松。</div>
+</div>
+
+<div class="scenario">
+  <h4>🌧 尾道遇雨</h4>
+  <div class="plan"><b>Plan A：</b>縮短千光寺，重點放在尾道商店街掃街與咖啡店泡店。</div>
+  <div class="plan"><b>Plan B：</b>整天改去倉敷美觀地區，雨中老街反而很有味道，大原美術館是室內景點。</div>
+  <div class="plan"><b>Plan C：</b>從福山轉直接去鞆之浦（崖上的波妞取景地），福山站搭巴士 30 分。</div>
+</div>
+
+<div class="scenario">
+  <h4>🌃 後樂園夜間點燈遇雨</h4>
+  <div class="plan"><b>替代：</b>改去岡山城天守內部（夜間照常開放，雨天反而能拍出夜雨城堡氣氛）。</div>
+  <div class="plan"><b>或：</b>OPA 百貨地下街美食 + Bic Camera 慢逛，全程不用走戶外。</div>
+</div>
+
+<div class="scenario">
+  <h4>✈ 機場巴士或航班大幅延誤</h4>
+  <div class="plan"><b>Day 1 抵達延誤：</b>機場巴士會隨航班動態調整，不用擔心搭不到。但夜間點燈最後入場 20:30，如延誤超過 2 小時，把點燈改到 Day 4 或 Day 6 早上。</div>
+  <div class="plan"><b>Day 6 回程：</b>計程車到機場約 ¥10,000，至少留 90 分鐘 buffer。</div>
+</div>
+
+<!-- ===== PACKING ===== -->
+<h2 class="section-title" id="packing">行前清單（兩人版）</h2>
+<p class="section-subtitle">Packing Checklist</p>
+
+<div class="info-grid">
+  <div class="info-card">
+    <h3>👗 服裝（11 月）</h3>
+    <p>岡山日均 11–16°C，早晚低溫 6–8°C，山區清晨 2–5°C。洋蔥式穿搭最實用：</p>
+    <ul>
+      <li>薄發熱衣 + 長袖內搭</li>
+      <li>中層毛衣或衛衣</li>
+      <li>防風外套</li>
+      <li><b>羽絨外套（Day 5 雲海必備）</b></li>
+      <li>長褲（避免短裙短褲）</li>
+      <li>圍巾、毛帽、薄手套</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>👟 鞋子</h3>
+    <p>金刀比羅宮 785 階、備中松山城登山步道、尾道千光寺都需要爬坡：</p>
+    <ul>
+      <li>防水好走的運動鞋（主力）</li>
+      <li>厚襪 2–3 雙</li>
+      <li>避免高跟鞋、涼鞋、新鞋</li>
+      <li>備一雙拖鞋（飯店、溫泉用）</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>💄 女生小物</h3>
+    <ul>
+      <li>保濕乳液（日本秋季很乾）</li>
+      <li>護唇膏、護手霜</li>
+      <li>暖暖包 5–10 個</li>
+      <li>口罩（人多場所）</li>
+      <li>小型卸妝棉（拍照後補妝）</li>
+      <li>生理用品（日本買也很方便）</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>📱 3C 與旅行</h3>
+    <ul>
+      <li>護照（影本各一份分開放）</li>
+      <li>行動電源（拍照超耗電）</li>
+      <li>日本 eSIM 或網路分享器</li>
+      <li>萬國轉接頭（A 型，日本通用）</li>
+      <li>折疊雨傘（11 月降雨日 6–8 天）</li>
+      <li>環保購物袋（裝伴手禮）</li>
+    </ul>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--gold);">
+    <h3>💴 現金準備</h3>
+    <p>日本仍有許多老店僅收現金，<b>建議錢包至少準備 ¥30,000 現金</b>。ATM 在 7-Eleven 與郵局可使用台灣金融卡提款。</p>
+    <p>姊妹倆建議共用一個錢包記帳，日後分攤。</p>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--accent);">
+    <h3>📋 出發前一週要做</h3>
+    <ul>
+      <li>訂好飯店（11 月紅葉季很搶手）</li>
+      <li>申請 Visit Japan Web</li>
+      <li>下載離線地圖</li>
+      <li>11/10（出發前 1 天）打電話訂雲海乘合計程車</li>
+      <li>確認虎航航班無變更</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== BUDGET ===== -->
+<h2 class="section-title" id="budget">預算總覽</h2>
+<p class="section-subtitle">Budget Summary</p>
+
+<div class="budget-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>交通</th>
+        <th>餐食</th>
+        <th>門票・其他</th>
+        <th>單日合計</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="day-cell">Day 1</td><td>¥1,020</td><td>¥3,700</td><td>¥1,100</td><td>¥5,820</td></tr>
+      <tr><td class="day-cell">Day 2</td><td>¥4,300</td><td>¥4,800</td><td>¥400</td><td>¥9,500</td></tr>
+      <tr><td class="day-cell">Day 3</td><td>¥6,840</td><td>¥5,000</td><td>¥1,500</td><td>¥13,340</td></tr>
+      <tr><td class="day-cell">Day 4</td><td>¥660</td><td>¥4,800</td><td>¥3,700</td><td>¥9,160</td></tr>
+      <tr><td class="day-cell">Day 5</td><td>¥5,200</td><td>¥5,300</td><td>¥2,500</td><td>¥13,000</td></tr>
+      <tr><td class="day-cell">Day 6</td><td>¥1,020</td><td>¥3,300</td><td>¥4,900</td><td>¥9,220</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>每人總額</td>
+        <td>¥19,040</td>
+        <td>¥26,900</td>
+        <td>¥14,100</td>
+        <td>¥60,040</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<div class="info-grid">
+  <div class="info-card" style="border-top-color: var(--accent);">
+    <h3>💡 兩人總預算估算</h3>
+    <p style="margin-bottom: 8px;"><b>每人單日平均：</b>約 ¥10,000（符合舒適型）</p>
+    <p style="margin-bottom: 8px;"><b>兩人 6 天交通 + 餐食 + 門票：</b>約 ¥120,000</p>
+    <p style="margin-bottom: 8px;"><b>兩人住宿 5 晚（雙人房）：</b>約 ¥50,000–80,000</p>
+    <p><b>含機票每人總預算：</b>約 NT$25,000–32,000</p>
+  </div>
+
+  <div class="info-card" style="border-top-color: var(--moss);">
+    <h3>💰 省錢小撇步</h3>
+    <ul>
+      <li>住宿訂雙人房比兩個單人房省一半</li>
+      <li>大型置物櫃兩人合用</li>
+      <li>機場巴士兩人都刷 ICOCA 即可</li>
+      <li>伴手禮分工買、避免重複</li>
+      <li>晚餐合點分食、品項更多</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-leaf">🍁 ✦ 🍂</div>
+  <p>姊妹的岡山秋旅 · 2026.11</p>
+  <p>祝旅途順利愉快 <span class="heart">♥</span></p>
+  <p style="font-size: 12px; opacity: 0.6; margin-top: 16px;">行程資訊以實際營業狀況為準・請以官方公告為準</p>
+</footer>
+
+<script>
+  function toggleDay(header) {
+    const card = header.closest('.day-card');
+    card.classList.toggle('open');
+  }
+
+  // 第一張卡片預設展開（Day 1）
+  // 點擊 nav 後展開對應日期
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // smooth scroll handled by CSS
+    });
+  });
+</script>
+
+</body>
+</html>
